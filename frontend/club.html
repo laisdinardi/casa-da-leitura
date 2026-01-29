@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar no clube | Casa da Leitura</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-main">Casa da Leitura</span>
+          <span class="logo-sub">um clube do livro para leituras sem pressa</span>
+        </div>
+
+        <nav class="main-nav">
+          <a href="index.html">Início</a>
+          <a href="library.html">Biblioteca</a>
+          <a href="book.html">Livro do mês</a>
+          <a href="how-it-works.html">Como funciona</a>
+          <a href="about.html">Sobre</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="club-wrap">
+      <section class="club-card">
+        <h1 class="club-title">Entrar no clube</h1>
+        <p class="club-subtitle">Deixe seu e-mail para receber as boas-vindas e o livro do mês.</p>
+
+        <form id="club-form" class="club-form" novalidate>
+          <div class="club-field">
+            <label for="name">Nome</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              class="club-input"
+              placeholder="Seu nome"
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="club-field">
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="club-input"
+              placeholder="seuemail@exemplo.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="club-actions">
+            <button type="submit" class="club-btn-primary">Quero entrar</button>
+
+            <p id="club-status" class="club-status" aria-live="polite"></p>
+            <p class="club-note">Sem spam. Só leitura com calma.</p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Casa da Leitura ©</p>
+    </footer>
+
+    <script>
+      const form = document.getElementById("club-form");
+      const statusEl = document.getElementById("club-status");
+
+      function setStatus(msg, type) {
+        statusEl.textContent = msg || "";
+        statusEl.className = "club-status " + (type || "");
+      }
+
+      // idioma: usa o que já está salvo no site (padrão PT)
+      function getLang() {
+        const saved = localStorage.getItem("cdl_lang");
+        return saved === "en" ? "en" : "pt";
+      }
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        setStatus("");
+
+        const name = (form.elements.name?.value || "").trim();
+        const email = (form.elements.email?.value || "").trim().toLowerCase();
+
+        if (!email) {
+          setStatus("Coloca seu e-mail pra eu te cadastrar 😊", "err");
+          return;
+        }
+
+        const payload = { name, email, lang: getLang() };
+
+        try {
+          const res = await fetch("http://localhost:3000/subscribe", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+
+          const json = await res.json().catch(() => ({}));
+
+          if (!res.ok || json.ok === false) {
+            setStatus(json.error || "Não consegui enviar. Tenta de novo.", "err");
+            return;
+          }
+
+          if (json.duplicated) {
+            setStatus("Você já estava inscrita. Mesmo assim te enviei o e-mail 💌", "ok");
+          } else {
+            setStatus("Pronto! Te mandei um e-mail de boas-vindas 💌", "ok");
+          }
+
+          form.reset();
+        } catch (err) {
+          setStatus("Falha de conexão com o servidor. Ele está rodando no terminal?", "err");
+        }
+      });
+    </script>
+  </body>
+</html>

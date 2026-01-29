@@ -1,0 +1,26 @@
+{
+  "subscribers": [
+    {
+      "name": "Lais Carvalho Di Nardi",
+      "email": "liz.dinard@hotmail.com",
+      "lang": "pt",
+      "source": "club.html",
+      "createdAt": "2026-01-27T19:10:09.358Z"
+    },
+    {
+      "name": "Lais",
+      "email": "lais.teste@gmail.com",
+      "createdAt": "2026-01-29T18:23:14.973Z"
+    },
+    {
+      "name": "lais",
+      "email": "lais.dinard@hotmail.com",
+      "createdAt": "2026-01-29T19:26:13.755Z"
+    },
+    {
+      "name": "sandra",
+      "email": "ssandra_carvalho@hotmail.com",
+      "createdAt": "2026-01-29T19:32:41.046Z"
+    }
+  ]
+}

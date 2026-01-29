@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livro do mês | Casa da Leitura</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER + NAV-->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-main">Casa da Leitura</span>
+          <span class="logo-sub">um clube do livro para leituras sem pressa</span>
+        </div>
+
+        <nav class="main-nav">
+          <a href="index.html">Início</a>
+          <a href="library.html">Biblioteca</a>
+          <a href="book.html">Livro do mês</a>
+          <a href="how-it-works.html">Como funciona</a>
+          <a href="about.html">Sobre</a>
+
+          <!-- Language switch (mesmo padrão do About/Library) -->
+          <div class="lang-switch" aria-label="Language switch">
+            <button id="btn-pt" type="button" class="active">PT</button>
+            <button id="btn-en" type="button">EN</button>
+          </div>
+
+          <a class="club-btn" href="club.html">Entrar no clube</a>
+
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Wrapper único para alternar PT/EN -->
+      <div class="lang is-pt" data-page="book" data-book-key="noites-brancas">
+        <!-- PT -->
+        <div class="lang-pt">
+          <div class="container book-page">
+            <section class="book-hero">
+              <div class="book-cover">
+                <img
+                  src="noites-brancas.jpg"
+                  alt="Capa do livro Noites Brancas"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="book-info">
+                <p class="book-meta"><strong>Mês</strong> Janeiro</p>
+                <h1 class="book-title">Noites Brancas</h1>
+                <p class="book-author">Fiódor Dostoiévski</p>
+
+                <p class="book-lead">
+                  Uma leitura sensível e introspectiva sobre encontros breves, solidão e a esperança silenciosa de ser amado.
+                </p>
+              </div>
+            </section>
+
+            <section class="discussion">
+              <header class="discussion-header">
+                <h2>Perguntas para discussão</h2>
+                <p class="discussion-subtitle">
+                  Um espaço para pensar em voz baixa e trocar com calma.
+                </p>
+              </header>
+
+              <div class="discussion-grid">
+                <article class="question-card">
+                  <h3>1</h3>
+                  <p>Você considera o narrador um sonhador ou alguém em fuga da realidade?</p>
+                </article>
+
+                <article class="question-card">
+                  <h3>2</h3>
+                  <p>A solidão apresentada no livro é escolhida ou imposta?</p>
+                </article>
+
+                <article class="question-card">
+                  <h3>3</h3>
+                  <p>O final trouxe conforto ou melancolia para você?</p>
+                </article>
+              </div>
+
+              <div class="discussion-write">
+                <h3 class="discussion-write-title">Deixe sua impressão</h3>
+                <p class="discussion-write-subtitle">
+                  Você pode escrever só uma frase também. Vale rascunho, vale sensação.
+                </p>
+
+                <form class="discussion-form" autocomplete="on">
+                  <div class="discussion-fields">
+                    <label class="field">
+                      <span>Nome (opcional)</span>
+                      <input type="text" name="name" placeholder="Seu nome" />
+                    </label>
+
+                    <label class="field field-wide">
+                      <span>Seu comentário</span>
+                      <textarea
+                        name="comment"
+                        rows="5"
+                        placeholder="O que ficou em você depois da leitura"
+                        required
+                      ></textarea>
+                    </label>
+                  </div>
+
+                  <button class="btn-primary" type="submit">Publicar comentário</button>
+                  <p class="form-hint">Os comentários ficam salvos neste navegador.</p>
+                </form>
+
+                <div class="comments">
+                  <h3 class="comments-title">Comentários</h3>
+                  <div class="comments-list" data-comments></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- EN -->
+        <div class="lang-en">
+          <div class="container book-page">
+            <section class="book-hero">
+              <div class="book-cover">
+                <img
+                  src="noites-brancas.jpg"
+                  alt="Book cover: White Nights"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="book-info">
+                <p class="book-meta"><strong>Month</strong> January</p>
+                <h1 class="book-title">White Nights</h1>
+                <p class="book-author">Fyodor Dostoevsky</p>
+
+                <p class="book-lead">
+                  A sensitive and introspective story about brief encounters, loneliness, and the quiet hope of being loved.
+                </p>
+              </div>
+            </section>
+
+            <section class="discussion">
+              <header class="discussion-header">
+                <h2>Discussion questions</h2>
+                <p class="discussion-subtitle">
+                  A calm space to think out loud and share.
+                </p>
+              </header>
+
+              <div class="discussion-grid">
+                <article class="question-card">
+                  <h3>1</h3>
+                  <p>Do you see the narrator as a dreamer, or someone escaping reality?</p>
+                </article>
+
+                <article class="question-card">
+                  <h3>2</h3>
+                  <p>Is the loneliness in the story chosen, or imposed?</p>
+                </article>
+
+                <article class="question-card">
+                  <h3>3</h3>
+                  <p>Did the ending feel comforting, or melancholic to you?</p>
+                </article>
+              </div>
+
+              <div class="discussion-write">
+                <h3 class="discussion-write-title">Leave your thoughts</h3>
+                <p class="discussion-write-subtitle">
+                  A single sentence is enough. Drafts are welcome.
+                </p>
+
+                <form class="discussion-form" autocomplete="on">
+                  <div class="discussion-fields">
+                    <label class="field">
+                      <span>Name (optional)</span>
+                      <input type="text" name="name" placeholder="Your name" />
+                    </label>
+
+                    <label class="field field-wide">
+                      <span>Your comment</span>
+                      <textarea
+                        name="comment"
+                        rows="5"
+                        placeholder="What stayed with you after reading"
+                        required
+                      ></textarea>
+                    </label>
+                  </div>
+
+                  <button class="btn-primary" type="submit">Post comment</button>
+                  <p class="form-hint">Comments are saved in this browser.</p>
+                </form>
+
+                <div class="comments">
+                  <h3 class="comments-title">Comments</h3>
+                  <div class="comments-list" data-comments></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Casa da Leitura ©</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

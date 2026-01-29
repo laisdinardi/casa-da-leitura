@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca | Casa da Leitura</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER + NAV-->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-main">Casa da Leitura</span>
+          <span class="logo-sub">um clube do livro para leituras sem pressa</span>
+        </div>
+
+        <nav class="main-nav">
+          <a href="index.html">Início</a>
+          <a href="library.html">Biblioteca</a>
+          <a href="book.html">Livro do mês</a>
+          <a href="how-it-works.html">Como funciona</a>
+          <a href="about.html">Sobre</a>
+
+          <!-- Language switch (mesmo padrão do About) -->
+          <div class="lang-switch" aria-label="Language switch">
+            <button id="btn-pt" type="button">PT</button>
+            <button id="btn-en" type="button" class="active">EN</button>
+          </div>
+
+          <a class="club-btn" href="club.html">Entrar no clube</a>
+
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- Wrapper único para o script conseguir alternar -->
+      <div class="lang is-en">
+        <!-- PT -->
+        <div class="lang-pt">
+          <div class="container">
+            <h2>Biblioteca</h2>
+
+            <section>
+              <h3>Clássicos</h3>
+
+              <div class="book-card">
+                <h4>Frankenstein</h4>
+                <p class="author">Mary Shelley</p>
+                <img src="frankenstein.jpg" alt="Book cover: Frankenstein"/>
+                <p class="book-description">
+                  <strong>Frankenstein</strong> é muito mais do que uma história de terror. É um romance sobre
+                  <em>solidão</em>, <em>criação</em> e responsabilidade emocional. Mary Shelley constrói uma narrativa
+                  melancólica que questiona o que significa ser humano e o que acontece quando o abandono fala mais alto
+                  do que o afeto.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <h4>Noites Brancas</h4>
+                <p class="author">Fiódor Dostoiévski</p>
+                <img src="noites-brancas.jpg" alt="Capa do livro Noites Brancas"/>
+                <p class="book-description">
+                  Um retrato delicado da solidão e dos encontros breves que podem marcar uma vida inteira.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <h4>Crime e Castigo</h4>
+                <p class="author">Fiódor Dostoiévski</p>
+                <img src="crime-e-castigo.jpg" alt="Capa do livro Crime e Castigo" />
+
+                <p class="book-description">
+                  <strong>Crime e Castigo</strong> é uma leitura intensa, mas profundamente humana. Mais do que uma
+                  história sobre culpa ou justiça, este livro mergulha na mente de alguém que tenta racionalizar seus
+                  próprios limites morais. Dostoiévski constrói uma narrativa densa, emocional e cheia de conflitos
+                  internos.
+                </p>
+
+                <p class="book-description">
+                  A leitura convida à reflexão sobre <em>consciência</em>, <em>arrependimento</em> e a complexidade das
+                  escolhas humanas. Apesar da fama de ser um livro difícil, a força da história está justamente na forma
+                  como ela aproxima o leitor dos pensamentos mais íntimos dos personagens.
+                </p>
+
+                <p class="book-description">
+                  É um livro para quem gosta de histórias psicológicas, personagens imperfeitos e narrativas que
+                  permanecem ecoando muito depois da última página. Uma leitura exigente, mas extremamente
+                  recompensadora.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h3>Romance</h3>
+
+              <div class="book-card">
+                <h4>Flores para Algernon</h4>
+                <p class="author">Daniel Keyes</p>
+                <img src="flowers-for-algernon.jpg" alt="Capa do livro Flores para Algernon" />
+
+                <p class="book-description">
+                  <strong>Flores para Algernon</strong> é uma leitura sensível e emocionalmente intensa, que fala sobre
+                  inteligência, afeto e pertencimento. A história acompanha a transformação de um personagem que deseja,
+                  acima de tudo, ser compreendido e aceito.
+                </p>
+
+                <p class="book-description">
+                  O livro provoca reflexões profundas sobre empatia, solidão e a forma como a sociedade trata quem foge
+                  dos padrões. A narrativa é delicada, mas ao mesmo tempo dolorosa, conduzindo o leitor por emoções que
+                  crescem de maneira silenciosa e inevitável.
+                </p>
+
+                <p class="book-description">
+                  É uma leitura para quem gosta de histórias humanas, tocantes e que permanecem no coração muito depois
+                  do fim. Um livro curto, mas impossível de esquecer.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <h4>O verão que mudou minha vida</h4>
+                <p class="author">Jenny Han</p>
+               <img src="the-summer-i-turned-pretty.jpg" alt="Capa do livro O verão que mudou minha vida" />
+
+                <p class="book-description">
+                  Essa é uma história leve, nostálgica e envolvente sobre crescimento, primeiras paixões e a transição
+                  delicada entre a adolescência e a vida adulta.
+                </p>
+
+                <p class="book-description">
+                  O livro captura a sensação de verões que parecem eternos, cheios de pequenas descobertas, inseguranças
+                  e sentimentos intensos. A narrativa é simples, mas carregada de emoção e identificação.
+                </p>
+
+                <p class="book-description">
+                  Uma leitura perfeita para quem busca conforto, romance e histórias que aquecem o coração, trazendo
+                  aquela sensação de lembranças boas e dias ensolarados.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h3>Terror e Suspense</h3>
+
+              <div class="book-card">
+                <h4>It</h4>
+                <p class="author">Stephen King</p>
+                <img src="it.jpg" alt="Capa do livro It" />
+
+                <p class="book-description">
+                  Essa é uma história sobre medo, mas também sobre amizade, infância e memória. Stephen King constrói um
+                  terror que vai além do sobrenatural, explorando medos que nascem da imaginação, do crescimento e das
+                  experiências que nos marcam para sempre.
+                </p>
+
+                <p class="book-description">
+                  A narrativa alterna entre passado e presente, criando uma atmosfera envolvente que mistura nostalgia e
+                  tensão. Mesmo sendo um livro longo, a leitura se sustenta pela força dos personagens e pela sensação
+                  constante de inquietação.
+                </p>
+
+                <p class="book-description">
+                  É uma leitura ideal para quem gosta de terror psicológico, histórias que acompanham personagens ao longo
+                  da vida e narrativas que falam tanto sobre monstros quanto sobre o que carregamos dentro de nós.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <h4>Misery</h4>
+                <p class="author">Stephen King</p>
+                <img src="misery.jpg" alt="Capa do livro Misery" />
+
+                <p class="book-description">
+                  <strong>Misery</strong> é um suspense psicológico intenso e claustrofóbico. A história se desenvolve
+                  quase inteiramente em um único espaço, o que torna a leitura ainda mais sufocante e envolvente. Stephen
+                  King explora o medo de perder o controle e a fragilidade humana em situações extremas e perturbadoras.
+                </p>
+
+                <p class="book-description">
+                  O terror aqui não vem de criaturas sobrenaturais, mas de relações de poder, obsessão e dependência. Cada
+                  página aumenta a tensão de forma gradual, mantendo o leitor preso à narrativa.
+                </p>
+
+                <p class="book-description">
+                  É uma leitura perfeita para quem gosta de suspense, tensão constante e histórias que provam que o maior
+                  medo pode estar em situações aparentemente comuns.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- EN -->
+        <div class="lang-en">
+          <div class="container">
+            <h2>Library</h2>
+
+            <section>
+              <h3>Classics</h3>
+
+              <div class="book-card">
+                <h4>Frankenstein</h4>
+                <p class="author">Mary Shelley</p>
+                <img src="frankenstein.jpg" alt="Book cover: Frankenstein"/>
+
+                <p class="book-description">
+                  <strong>Frankenstein</strong> is far more than a horror story. It is a novel about <em>loneliness</em>,
+                  <em>creation</em>, and emotional responsibility. Mary Shelley explores what it truly means to be human
+                  and what happens when abandonment speaks louder than care.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <h4>White Nights</h4>
+                <p class="author">Fyodor Dostoevsky</p>
+                <img src="noites-brancas.jpg" alt="Capa do livro Noites Brancas" />
+
+                <p class="book-description">
+                  A delicate portrait of loneliness and brief encounters that can shape an entire life.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <h4>Crime and Punishment</h4>
+                <p class="author">Fyodor Dostoevsky</p>
+                <img src="crime-e-castigo.jpg" alt="Capa do livro Crime e Castigo" />
+
+                <p class="book-description">
+                  <strong>Crime and Punishment</strong> is an intense yet deeply human novel. More than a story about
+                  guilt or justice, it dives into the mind of someone trying to rationalize his own moral limits.
+                  Dostoevsky builds a dense, emotional narrative filled with inner conflict.
+                </p>
+
+                <p class="book-description">
+                  The book invites reflection on <em>conscience</em>, <em>remorse</em>, and the complexity of human
+                  choices. Despite its reputation for being challenging, its true power lies in how closely it connects
+                  the reader to the characters inner thoughts.
+                </p>
+
+                <p class="book-description">
+                  This is a novel for readers who enjoy psychological depth, flawed characters and stories that linger
+                  long after the final page.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h3>Romance</h3>
+
+              <div class="book-card">
+                <h4>Flowers for Algernon</h4>
+                <p class="author">Daniel Keyes</p>
+                <img src="flowers-for-algernon.jpg" alt="Capa do livro Flores para Algernon" />
+
+                <p class="book-description">
+                  <strong>Flowers for Algernon</strong> is a sensitive and emotionally powerful novel about intelligence,
+                  affection and belonging. The story follows a character whose deepest desire is to be understood and
+                  accepted.
+                </p>
+
+                <p class="book-description">
+                  The book invites reflection on empathy, loneliness and the way society treats those who fall outside
+                  conventional norms. Its narrative is gentle yet deeply painful, guiding the reader through emotions
+                  that grow quietly and inevitably.
+                </p>
+
+                <p class="book-description">
+                  This is a story for readers who appreciate human, moving narratives that linger long after the final
+                  page.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <h4>The Summer I Turned Pretty</h4>
+                <p class="author">Jenny Han</p>
+                <img src="the-summer-i-turned-pretty.jpg" alt="Capa do livro O verão que mudou minha vida" />
+
+                <p class="book-description">
+                  This is a light, nostalgic and heartfelt story about growing up, first loves and the delicate
+                  transition from adolescence into adulthood.
+                </p>
+
+                <p class="book-description">
+                  The novel captures the feeling of summers that seem endless, filled with small discoveries,
+                  insecurities and intense emotions. Its narrative is simple, yet deeply relatable.
+                </p>
+
+                <p class="book-description">
+                  This book is perfect for readers seeking comfort, romance and stories that feel warm and familiar, like
+                  cherished summer memories.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h3>Horror and Thriller</h3>
+
+              <div class="book-card">
+                <h4>It</h4>
+                <p class="author">Stephen King</p>
+                <img src="it.jpg" alt="Capa do livro It" />
+
+                <p class="book-description">
+                  This is a story about fear, but also about friendship, childhood and memory. Stephen King creates a
+                  form of horror that goes beyond the supernatural, exploring fears born from imagination, growing up
+                  and the experiences that stay with us forever.
+                </p>
+
+                <p class="book-description">
+                  The narrative moves between past and present, building an immersive atmosphere filled with both
+                  nostalgia and tension. Despite its length, the story remains compelling through strong characters and
+                  a constant sense of unease.
+                </p>
+
+                <p class="book-description">
+                  This book is perfect for readers who enjoy psychological horror, coming of age stories and narratives
+                  that confront both monsters and inner fears.
+                </p>
+              </div>
+
+              <div class="book-card">
+                <h4>Misery</h4>
+                <p class="author">Stephen King</p>
+               <img src="misery.jpg" alt="Capa do livro Misery" />
+
+                <p class="book-description">
+                  <strong>Misery</strong> is an intense and claustrophobic psychological thriller. The story unfolds
+                  mostly in a single setting, which makes the reading experience even more suffocating and gripping.
+                  Stephen King explores the fear of losing control and human vulnerability under extreme circumstances.
+                </p>
+
+                <p class="book-description">
+                  The horror here does not come from supernatural elements, but from power dynamics, obsession and
+                  dependency. Each page gradually builds tension, keeping the reader completely absorbed.
+                </p>
+
+                <p class="book-description">
+                  This book is ideal for readers who enjoy suspense, sustained tension and stories that reveal how fear
+                  can emerge from seemingly ordinary situations.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Casa da Leitura ©</p>
+    </footer>
+
+    <!-- JS (caminho correto: library.html está dentro de /frontend) -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
