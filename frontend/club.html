@@ -100,7 +100,7 @@
         const payload = { name, email, lang: getLang() };
 
         try {
-          const res = await fetch("http://localhost:3000/subscribe", {
+          const res = await fetch("/subscribe", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),
@@ -121,7 +121,7 @@
 
           form.reset();
         } catch (err) {
-          setStatus("Falha de conexão com o servidor. Ele está rodando no terminal?", "err");
+          setStatus("Falha de conexão com o servidor.", "err");
         }
       });
     </script>
