@@ -1,0 +1,30 @@
+{
+    "currentKey": "2026-01",
+    "books":{
+        "2020-01": {
+            "pt": {
+                "month": "Janeiro",
+                "title": "Noites Brancas",
+                "author": "Fiódor Dostoiévski",
+                "line":"Uma leitura sensível e introspectiva sobre encontros breves, solidão e a esperança silenciosa de ser amado.",
+                "questions": [
+                    "Você considera o narrador um sonhador ou alguém em fuga da realidade?",
+                    "A solidão apresentada no livro é escolhida ou imposta?",
+                    "O final trouxe conforto ou inquietação para você?"
+                ]
+            },
+            "en": {
+                "month": "January",
+                "title": "White Nights",
+                "author": "Fyodor Dostoevsky",
+                "line":"A sensitive and introspective read about brief encounters, solitude, and the silent hope of being loved.",
+                "questions": [
+                    "Do you consider the narrator a dreamer or someone escaping reality?",
+                    "Is the solitude presented in the book chosen or imposed?",
+                    "Did the ending bring comfort or unease to you?"
+                ]
+            },
+            "image": "noites-brancas.jpg"
+        }
+    }
+}

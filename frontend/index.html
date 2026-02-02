@@ -1,237 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <title>Casa da Leitura</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Casa da Leitura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    <body>
+  <body>
+    <!-- HEADER + NAV-->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-main">Casa da Leitura</span>
+          <span class="logo-sub">um clube do livro para leituras sem pressa</span>
+        </div>
 
-        <!-- HEADER + NAV-->
-<header class="site-header">
-  <div class="header-inner">
+        <nav class="main-nav">
+          <a href="index.html">Início</a>
+          <a href="library.html">Biblioteca</a>
+          <a href="book.html">Livro do mês</a>
+          <a href="how-it-works.html">Como funciona</a>
+          <a href="about.html">Sobre</a>
 
-    <div class="logo">
-      <span class="logo-main">Casa da Leitura</span>
-      <span class="logo-sub">um clube do livro para leituras sem pressa</span>
-    </div>
-
-    <nav class="main-nav">
-      <a href="index.html">Início</a>
-      <a href="library.html">Biblioteca</a>
-      <a href="book.html">Livro do mês</a>
-      <a href="how-it-works.html">Como funciona</a>
-        <a href="about.html">Sobre</a>
-        <div class="lang-switch" aria-label="Language switch">
+          <div class="lang-switch" aria-label="Language switch">
             <button id="btn-pt" type="button">PT</button>
             <button id="btn-en" type="button">EN</button>
-        </div>
-      <a class="club-btn" href="club.html">Entrar no clube</a>
+          </div>
+
+          <a class="club-btn" href="club.html">Entrar no clube</a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="secondary-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="how-it-works.html">Como funciona</a></li>
+        <li><a href="library.html">Biblioteca</a></li>
+        <li><a href="book.html">Livro do mês</a></li>
+      </ul>
     </nav>
 
-  </div>
-</header>
+    <main>
+      <!-- Wrapper único para o script conseguir alternar -->
+      <div class="lang is-pt" data-page="index">
+        <!-- PT -->
+        <div class="lang-pt">
+          <div class="container">
+            <section>
+              <h2>Bem-vinda à Casa da Leitura</h2>
+              <p>
+                <em
+                  >Aqui, a leitura não é uma corrida. É uma experiência compartilhada, sem metas agressivas ou
+                  cobranças.</em
+                >
+              </p>
+            </section>
 
-<nav class="secondary-nav">
-  <ul>
-    <li><a href="index.html">Início</a></li>
-    <li><a href="about.html">Sobre</a></li>
-    <li><a href="how-it-works.html">Como funciona</a></li>
-    <li><a href="library.html">Biblioteca</a></li>
-    <li><a href="book.html">Livro do mês</a></li>
-  </ul>
-</nav>
+            <section>
+              <h3>Livro do mês</h3>
 
+              <img src="/the-white-nights.jpg" alt="Capa do livro Noites Brancas" />
 
+              <p class="book-description">
+                Se você sempre teve curiosidade sobre a literatura russa, mas achou que seria algo pesado ou distante,
+                <strong>Noites Brancas</strong> é o começo ideal. Esta é uma história curta, sensível e profundamente
+                humana, que fala sobre <em>solidão</em>, <em>esperança</em> e o desejo quase silencioso de ser visto pelo
+                outro.
+              </p>
 
-        <main>
-  <!-- Wrapper único para o script conseguir alternar -->
-  <div class="lang is-pt">
+              <p class="book-description">
+                Dostoiévski constrói uma narrativa feita de encontros noturnos, conversas delicadas e emoções contidas.
+                Não é um livro sobre grandes acontecimentos, mas sobre sentimentos que atravessam qualquer época. A
+                leitura flui sem pressa, como uma caminhada à noite, quando tudo parece mais intenso e verdadeiro.
+              </p>
 
-    <!-- PT -->
-    <div class="lang-pt">
-      <div class="container">
-        <section>
-          <h2>Bem-vinda à Casa da Leitura</h2>
-          <p><em>Aqui, a leitura não é uma corrida. É uma experiência compartilhada, sem metas agressivas ou cobranças.</em></p>
-        </section>
+              <p class="book-description">
+                Este é um livro para quem quer começar pela literatura russa sem medo, para quem gosta de histórias
+                introspectivas e para quem acredita que algumas leituras, mesmo curtas, permanecem com a gente por muito
+                tempo (<em>sério, penso nesse livro ao menos uma vez por semana</em>).
+              </p>
+            </section>
 
-        <section>
-          <h3>Livro do mês</h3>
+            <section class="join-club" id="join">
+              <h3>Entrar no clube</h3>
+              <p>Receba informações sobre o próximo livro do clube:</p>
 
-          <img src="the-white-nights.jpg" alt="Capa do livro Noites Brancas">
+              <form id="club-form-pt" class="club-form">
+                <input type="text" name="name" placeholder="Seu primeiro nome ou apelido" required />
+                <input type="email" name="email" placeholder="Seu email" required />
+                <button type="submit">Entrar no clube</button>
+              </form>
 
-          <p class="book-description">
-            Se você sempre teve curiosidade sobre a literatura russa, mas achou que seria algo pesado ou distante,
-            <strong>Noites Brancas</strong> é o começo ideal. Esta é uma história curta, sensível e profundamente humana,
-            que fala sobre <em>solidão</em>, <em>esperança</em> e o desejo quase silencioso de ser visto pelo outro.
-          </p>
+              <p id="club-status-pt" class="form-note" aria-live="polite"></p>
+            </section>
 
-          <p class="book-description">
-            Dostoiévski constrói uma narrativa feita de encontros noturnos, conversas delicadas e emoções contidas.
-            Não é um livro sobre grandes acontecimentos, mas sobre sentimentos que atravessam qualquer época.
-            A leitura flui sem pressa, como uma caminhada à noite, quando tudo parece mais intenso e verdadeiro.
-          </p>
+            <section>
+              <h3>Resenhas da comunidade</h3>
 
-          <p class="book-description">
-            Este é um livro para quem quer começar pela literatura russa sem medo, para quem gosta de histórias introspectivas
-            e para quem acredita que algumas leituras, mesmo curtas, permanecem com a gente por muito tempo
-            (<em>sério, penso nesse livro ao menos uma vez por semana</em>).
-          </p>
-        </section>
+              <p class="empty-reviews">
+                Ainda não há resenhas por aqui.<br />
+                Seja a primeira pessoa a comentar sobre o livro do mês! 😊
+              </p>
 
-        <section class="join-club">
-          <h3>Entrar no clube</h3>
-          <p>Receba informações sobre o próximo livro do clube:</p>
+              <form class="review-form">
+                <label>
+                  Seu nome
+                  <input type="text" placeholder="Ex: Maria" />
+                </label>
 
-          <form id="club-form">
-            <input type="text" name="name" placeholder="Seu primeiro nome ou apelido" required>
-            <input type="email" name="email" placeholder="Seu email" required>
-            <button type="submit">Entrar no clube</button>
-          </form>
+                <label>
+                  Nota
+                  <select>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                  </select>
+                </label>
 
-          <p id="club-status" class="form-note"></p>
-        </section>
+                <label>
+                  Comentário
+                  <textarea rows="4" placeholder="Escreva sua resenha..."></textarea>
+                </label>
 
-        <section>
-          <h3>Resenhas da comunidade</h3>
+                <label class="spoiler-check">
+                  <input type="checkbox" />
+                  Meu comentário contém spoilers
+                </label>
 
-          <p class="empty-reviews">
-            Ainda não há resenhas por aqui.<br>
-            Seja a primeira pessoa a comentar sobre o livro do mês! 😊
-          </p>
+                <button type="submit">Enviar comentário</button>
 
-          <form class="review-form">
-            <label>
-              Seu nome
-              <input type="text" placeholder="Ex: Maria">
-            </label>
+                <p class="form-note">(Os comentários ainda não são salvos. Em breve.)</p>
+              </form>
+            </section>
+          </div>
+        </div>
 
-            <label>
-              Nota
-              <select>
-                <option value="5">⭐⭐⭐⭐⭐</option>
-                <option value="4">⭐⭐⭐⭐</option>
-                <option value="3">⭐⭐⭐</option>
-                <option value="2">⭐⭐</option>
-                <option value="1">⭐</option>
-              </select>
-            </label>
+        <!-- EN -->
+        <div class="lang-en">
+          <div class="container">
+            <section>
+              <h2>Welcome to Reading House</h2>
+              <p>
+                <em>Here, reading is not a race. It's a shared experience, without pressure or performance goals.</em>
+              </p>
+            </section>
 
-            <label>
-              Comentário
-              <textarea rows="4" placeholder="Escreva sua resenha..."></textarea>
-            </label>
+            <section>
+              <h3>Book of the month</h3>
 
-            <label class="spoiler-check">
-              <input type="checkbox">
-              Meu comentário contém spoilers
-            </label>
+              <img src="/the-white-nights.jpg" alt="Book cover: White Nights" />
 
-            <button type="submit">Enviar comentário</button>
+              <p class="book-description">
+                If you have always been curious about Russian literature but felt it might be too heavy or distant,
+                <strong>White Nights</strong> is the perfect place to begin. This is a short, gentle and deeply human
+                story about <em>loneliness</em>, <em>hope</em>, and the quiet desire to be truly seen by someone.
+              </p>
 
-            <p class="form-note">(Os comentários ainda não são salvos. Em breve.)</p>
-          </form>
-        </section>
+              <p class="book-description">
+                Dostoevsky builds a narrative through nighttime encounters, delicate conversations and restrained
+                emotions. It is not a story driven by major events, but by feelings that transcend time. The reading
+                flows slowly, like a nighttime walk, when everything feels more intense and sincere.
+              </p>
+
+              <p class="book-description">
+                This book is ideal for readers who want to explore Russian literature without fear, for those who enjoy
+                introspective stories and for anyone who believes that some books, even short ones, stay with us long
+                after we finish them (<em>I swear I think about this book at least once a week since I've read it</em>).
+              </p>
+            </section>
+
+            <section class="join-club" id="join-en">
+              <h3>Join the club</h3>
+              <p>Leave your email to receive updates about the next book:</p>
+
+              <form id="club-form-en" class="club-form">
+                <input type="text" name="name" placeholder="Your name or nickname" required />
+                <input type="email" name="email" placeholder="your@email.com" required />
+                <button type="submit">Join</button>
+              </form>
+
+              <p id="club-status-en" class="form-note" aria-live="polite"></p>
+            </section>
+
+            <section>
+              <h3>Community reviews</h3>
+
+              <p class="empty-reviews">
+                No reviews yet.<br />
+                Be the first to comment on this month's book! 😊
+              </p>
+
+              <form class="review-form">
+                <label>
+                  Your name
+                  <input type="text" placeholder="Ex: Maria" />
+                </label>
+
+                <label>
+                  Rating
+                  <select>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                  </select>
+                </label>
+
+                <label>
+                  Comment
+                  <textarea rows="4" placeholder="Write your review..."></textarea>
+                </label>
+
+                <label class="spoiler-check">
+                  <input type="checkbox" />
+                  My comment contains spoilers
+                </label>
+
+                <button type="submit">Send</button>
+
+                <p class="form-note">(Comments are not saved yet. Soon.)</p>
+              </form>
+            </section>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
 
-    <!-- EN -->
-    <div class="lang-en">
-      <div class="container">
-        <section>
-          <h2>Welcome to Reading House</h2>
-          <p><em>Here, reading is not a race. It's a shared experience, without pressure or performance goals.</em></p>
-        </section>
+    <footer>
+      <p>Casa da Leitura ©</p>
+    </footer>
 
-        <section>
-          <h3>Book of the month</h3>
-
-          <img src="the-white-nights.jpg" alt="Book cover: White Nights">
-
-          <p class="book-description">
-            If you have always been curious about Russian literature but felt it might be too heavy or distant,
-            <strong>White Nights</strong> is the perfect place to begin. This is a short, gentle and deeply human story
-            about <em>loneliness</em>, <em>hope</em>, and the quiet desire to be truly seen by someone.
-          </p>
-
-          <p class="book-description">
-            Dostoevsky builds a narrative through nighttime encounters, delicate conversations and restrained emotions.
-            It is not a story driven by major events, but by feelings that transcend time. The reading flows slowly,
-            like a nighttime walk, when everything feels more intense and sincere.
-          </p>
-
-          <p class="book-description">
-            This book is ideal for readers who want to explore Russian literature without fear, for those who enjoy
-            introspective stories and for anyone who believes that some books, even short ones, stay with us long after
-            we finish them (<em>I swear I think about this book at least once a week since I've read it</em>).
-          </p>
-        </section>
-
-        <section class="join-club">
-          <h3>Join the club</h3>
-          <p>Leave your email to receive updates about the next book:</p>
-
-          <form id="club-form">
-            <input type="text" name="name" placeholder="Your name or nickname" required>
-            <input type="email" name="email" placeholder="your@email.com" required>
-            <button type="submit">Join</button>
-          </form>
-
-          <p id="club-status" class="form-note"></p>
-        </section>
-
-        <section>
-          <h3>Community reviews</h3>
-
-          <p class="empty-reviews">
-            No reviews yet.<br>
-            Be the first to comment on this month's book! 😊
-          </p>
-
-          <form class="review-form">
-            <label>
-              Your name
-              <input type="text" placeholder="Ex: Maria">
-            </label>
-
-            <label>
-              Rating
-              <select>
-                <option value="5">⭐⭐⭐⭐⭐</option>
-                <option value="4">⭐⭐⭐⭐</option>
-                <option value="3">⭐⭐⭐</option>
-                <option value="2">⭐⭐</option>
-                <option value="1">⭐</option>
-              </select>
-            </label>
-
-            <label>
-              Comment
-              <textarea rows="4" placeholder="Write your review..."></textarea>
-            </label>
-
-            <label class="spoiler-check">
-              <input type="checkbox">
-              My comment contains spoilers
-            </label>
-
-            <button type="submit">Send</button>
-
-            <p class="form-note">(Comments are not saved yet. Soon.)</p>
-          </form>
-        </section>
-      </div>
-    </div>
-
-  </div>
-</main>
-
-        <footer>
-            <p>Casa da Leitura ©</p>
-        </footer>
-
-        <script src="js/script.js"></script>
-    </body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

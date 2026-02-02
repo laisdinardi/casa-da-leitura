@@ -271,6 +271,25 @@ app.post("/subscribe", async (req, res) => {
   }
 });
 
+const BOOKS_PATH = path.join(__dirname, "data", "books.json");
+
+function readBooks() {
+  try {
+    if (!fs.existsSync(BOOKS_PATH)) return null;
+    return JSON.parse(fs.readFileSync(BOOKS_PATH, "utf-8") || "null");
+  } catch {
+    return null;
+  }
+}
+
+app.get("/api/book", (req, res) => {
+  const db = readBooks();
+  if (!db || !db.currentKey || !db.books?.[db.currentKey]) {
+    return res.status(404).json({ ok: false, error: "Livro do mês não configurado." });
+  }
+  return res.json({ ok: true, key: db.currentKey, book: db.books[db.currentKey] });
+});
+
 /* =========================
    Start
    ========================= */
